@@ -1,0 +1,11 @@
+<tr>
+  <td>
+    <%= category.name %>
+  </td>
+  <td>
+    <%= category.products.count %>
+  </td>
+  <td>
+    <%= humanized_money_with_symbol category.products.sum(:price_cents) / 100 %>
+  </td>
+</tr>
